@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:mc_player/enums/orientaton.dart';
 import 'package:photo_manager/photo_manager.dart';
 import 'package:flutter_video_info/flutter_video_info.dart';
 
@@ -53,4 +54,9 @@ class VideoUtil {
     VideoData? info = await videoInfo.getVideoInfo(videoFilePath);
     return info;
   }
+
+  static MyOrientation getOrientation(num aspectRatio){
+    return aspectRatio>1?MyOrientation.horizontal:MyOrientation.vertical;
+  }
+
 }

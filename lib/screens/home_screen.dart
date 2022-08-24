@@ -1,3 +1,4 @@
+import 'package:auto_orientation/auto_orientation.dart';
 import 'package:flutter/material.dart';
 import 'package:mc_player/components/video_grid.dart';
 import 'package:mc_player/utils/video_util.dart';
@@ -18,6 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   void initState() {
+    AutoOrientation.portraitUpMode();
     fetch();
     super.initState();
   }

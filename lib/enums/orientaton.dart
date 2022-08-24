@@ -1,0 +1,4 @@
+enum MyOrientation {
+  horizontal,
+  vertical
+}
